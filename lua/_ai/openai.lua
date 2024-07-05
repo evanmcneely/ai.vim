@@ -113,7 +113,7 @@ function M.completions(body, on_data, on_complete)
 		temperature = config.temperature,
 		stream = true,
 	})
-	request("chat/chat/completions", body, on_data, on_complete)
+	request("chat/completions", body, on_data, on_complete)
 end
 
 ---@param body table
@@ -124,7 +124,7 @@ function M.edits(body, on_data, on_complete)
 		model = config.edits_model,
 		temperature = config.temperature,
 	})
-	request("chat/chat/completions", body, on_data, on_complete)
+	request("chat/completions", body, on_data, on_complete)
 end
 
 return M
